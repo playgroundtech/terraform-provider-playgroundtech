@@ -14,7 +14,7 @@ provider "playgroundtech" {
 
 
 resource "playgroundtech_application" "test" {
-  phone_number = "012345678910"
+  phone_number = "0123456789"
   email        = "email@email.com"
   linkedin     = "linkedin.com"
   github       = "github.com"

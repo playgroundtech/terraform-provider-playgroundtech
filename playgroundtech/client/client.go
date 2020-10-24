@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-// HostURL - Default Hashicups URL
+// HostURL - Default URL
 const HostURL string = "http://localhost:8888"
 
 // Client -
@@ -34,9 +34,11 @@ type AuthResponse struct {
 
 // NewClient -
 func NewClient(host, password, email *string) (*Client, error) {
+
+
 	c := Client{
 		HTTPClient: &http.Client{Timeout: 10 * time.Second},
-		// Default Hashicups URL
+		// Default URL
 		HostURL: HostURL,
 	}
 
