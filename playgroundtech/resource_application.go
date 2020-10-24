@@ -21,10 +21,6 @@ func resourceApplication() *schema.Resource {
 				Optional: true,
 				Computed: true,
 			},
-			"applicant_id": {
-				Type: schema.TypeString,
-				Computed: true,
-			},
 			"phone_number": {
 				Type: schema.TypeString,
 				Required: true,

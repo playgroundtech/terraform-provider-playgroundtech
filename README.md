@@ -1,30 +1,69 @@
 ## Pre-req
 
-### Create User:
-```bash
-curl -X POST -d '{"username": "username","email": "email@email.com", "password": "password"}' localhost:8888/api/v1/users
-```
-
-## Test sample configuration
-
 First, build and install the provider.
 
 ```shell
 $ make install
 ```
-
-Then, navigate to the `examples` directory. 
-
-```shell
-$ cd examples
+In order to make request to the api you need to create a user.  
+Use the following command and to your information:
+```bash
+curl -X POST -d '{"username": "username","email": "email@email.com", "password": "password"}' localhost:8888/api/v1/users
 ```
 
-Run the following command to initialize the workspace and apply the sample configuration.
-
-```shell
-$ terraform init && terraform apply
+### Provider Docs:
+Required Providers:
+```hcl
+terraform {
+  required_providers {
+    playgroundtech = {
+      versions = ["0.2"]
+      source   = "playgroundtech.se/edu/playgroundtech"
+    }
+  }
+}
 ```
 
+In order to make calls against the Playgroundtech provider you need to authenticate.    
+This can be done either by setting the following environment variables `PLAYGROUNDTECH_EMAIL` and `PLAYGROUNDTECH_PASSWORD`.  
+It's also possible to set them by defining the following block in your `.tf` file.  
+```hcl
+provider "playgroundtech" {
+  email    = "email@email.com"
+  password = "password"
+}
+```
+### Playground Resource:  
+Manages a job application to Playgroundtech.  
+
+#### Example Usage:  
+```hcl
+resource "playgroundtech_application" "test" {
+  phone_number = "0123456789"
+  email        = "email@email.com"
+  linkedin     = "linkedin.com"
+  github       = "github.com"
+  homepage     = "homepage.com"
+}
+```
+
+#### Argument Reference:  
+- `phone_number` | (Required) - String    
+Phone number applicant want to be contacted on.  
+
+- `email` | (Required) - String    
+Email applicant want to be contacted on.  
+  
+- `linkedin` | (Required) - String  
+Linkedin of applicant.  
+
+- `github` | (Optional) - String  
+Github of applicant to be used as further reference.  
+
+- `homepage` | (Optional) - String  
+Homepage of applicant to be used as further reference.  
+  
+  
 ### Delete User & Application:
 To fetch your `:ID` and `Token` you can login with following:  
 

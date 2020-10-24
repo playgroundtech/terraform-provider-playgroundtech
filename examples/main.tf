@@ -7,11 +7,11 @@ terraform {
   }
 }
 
+
 provider "playgroundtech" {
   email    = "email@email.com"
   password = "password"
 }
-
 
 resource "playgroundtech_application" "test" {
   phone_number = "0123456789"
