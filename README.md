@@ -8,7 +8,7 @@ $ make install
 In order to make request to the api you need to create a user.  
 Use the following command and to your information:
 ```bash
-curl -X POST -d '{"username": "username","email": "email@email.com", "password": "password"}' localhost:8888/api/v1/users
+curl -X POST -d '{"username": "username","email": "email@email.com", "password": "password"}' 13.48.134.210/api/v1/users
 ```
 
 ### Provider Docs:
