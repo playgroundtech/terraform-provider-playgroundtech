@@ -10,7 +10,7 @@ import (
 )
 
 // HostURL - Default URL
-const HostURL string = "http://13.48.134.210"
+const HostURL string = "http://localhost:8888"
 
 // Client -
 type Client struct {

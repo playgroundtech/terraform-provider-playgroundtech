@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     playgroundtech = {
-      versions = ["0.2"]
+      version = "0.2"
       source   = "playgroundtech.se/edu/playgroundtech"
     }
   }
@@ -14,7 +14,7 @@ provider "playgroundtech" {
 }
 
 resource "playgroundtech_application" "test" {
-  phone_number = "0123456789"
+  phone_number = "012345678"
   email        = "email@email.com"
   linkedin     = "linkedin.com"
   github       = "github.com"
