@@ -16,9 +16,9 @@ func resourceApplication() *schema.Resource {
 		UpdateContext: resourceApplicationUpdate,
 		DeleteContext: resourceApplicationDelete,
 		Schema: map[string]*schema.Schema{
-			"last_updated": &schema.Schema{
+			"last_updated": {
 				Type:     schema.TypeString,
-				Optional: true,
+				// Optional: true,
 				Computed: true,
 			},
 			"phone_number": {

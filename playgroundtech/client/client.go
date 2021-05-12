@@ -35,7 +35,6 @@ type AuthResponse struct {
 // NewClient -
 func NewClient(host, password, email *string) (*Client, error) {
 
-
 	c := Client{
 		HTTPClient: &http.Client{Timeout: 10 * time.Second},
 		// Default URL
