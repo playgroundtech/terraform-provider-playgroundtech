@@ -10,7 +10,7 @@ import (
 )
 
 // HostURL - Default URL
-const HostURL string = "http://localhost:8888"
+const HostURL string = "http://api.playgroundtech.io"
 
 // Client -
 type Client struct {
