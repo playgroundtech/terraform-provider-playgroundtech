@@ -17,8 +17,8 @@ Required Providers:
 terraform {
   required_providers {
     playgroundtech = {
-      versions = "0.2"
-      source   = "playgroundtech.se/edu/playgroundtech"
+      version = "0.2"
+      source   = "playgroundtech.io/job/application"
     }
   }
 }
