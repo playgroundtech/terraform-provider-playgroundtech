@@ -1,7 +1,7 @@
 TEST?=$$(go list ./... | grep -v 'vendor')
-HOSTNAME=playgroundtech.se
-NAMESPACE=edu
-NAME=playgroundtech
+HOSTNAME=playgroundtech.io
+NAMESPACE=job
+NAME=application
 BINARY=terraform-provider-${NAME}
 VERSION=0.2
 OS_ARCH=darwin_amd64

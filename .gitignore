@@ -6,8 +6,11 @@
 **/.terraform/*
 
 # .tfstate files
-*/.tfstate
-*/.tfstate.*
+**/*.tfstate
+**/.tfstate.*
+
+# .lock.hcl files
+**/*.lock.hcl
 
 # Crash log files
 crash.log
