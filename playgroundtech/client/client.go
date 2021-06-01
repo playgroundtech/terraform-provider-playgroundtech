@@ -56,7 +56,7 @@ func NewClient(host, password, email *string) (*Client, error) {
 		}
 
 		// authenticate
-		req, err := http.NewRequest("POST", fmt.Sprintf("%s/api/v1/login", c.HostURL), strings.NewReader(string(rb)))
+		req, err := http.NewRequest("POST", fmt.Sprintf("%s/v1/login", c.HostURL), strings.NewReader(string(rb)))
 		if err != nil {
 			return nil, err
 		}
