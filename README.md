@@ -8,7 +8,7 @@ $ make install
 In order to make request to the api you need to create a user.  
 Use the following command and to your information:
 ```bash
-curl -X POST -d '{"email": "email@email.com", "password": "password"}' api.playgroundtech.io/api/v1/users
+curl -X POST -d '{"email": "email@email.com", "password": "password"}' https://api.playgroundtech.io/api/v1/users
 ```
 
 ### Provider Docs:

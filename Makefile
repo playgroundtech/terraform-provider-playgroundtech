@@ -3,7 +3,7 @@ HOSTNAME=playgroundtech.io
 NAMESPACE=job
 NAME=application
 BINARY=terraform-provider-${NAME}
-VERSION=0.2
+VERSION=0.1
 OS_ARCH=darwin_amd64
 
 default: install
