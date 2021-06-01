@@ -7,9 +7,9 @@ import (
 	"strings"
 )
 
-// GetOrder - Returns a specifc order
+// GetApplication - Returns a specifc application
 func (c *Client) GetApplication(applicationID string) (*Application, error) {
-	req, err := http.NewRequest("GET", fmt.Sprintf("%s/api/v1/application/%s", c.HostURL, applicationID), nil)
+	req, err := http.NewRequest("GET", fmt.Sprintf("%s/v1/application/%s", c.HostURL, applicationID), nil)
 	if err != nil {
 		return nil, err
 	}
@@ -28,14 +28,14 @@ func (c *Client) GetApplication(applicationID string) (*Application, error) {
 	return &order, nil
 }
 
-// CreateOrder - Create new order
+// CreateApplication - Create new application
 func (c *Client) CreateApplication(application Application) (*Application, error) {
 	rb, err := json.Marshal(application)
 	if err != nil {
 		return nil, err
 	}
 
-	req, err := http.NewRequest("POST", fmt.Sprintf("%s/api/v1/application", c.HostURL), strings.NewReader(string(rb)))
+	req, err := http.NewRequest("POST", fmt.Sprintf("%s/v1/application", c.HostURL), strings.NewReader(string(rb)))
 	if err != nil {
 		return nil, err
 	}
@@ -54,14 +54,14 @@ func (c *Client) CreateApplication(application Application) (*Application, error
 	return &order, nil
 }
 
-// UpdateOrder - Updates an order
+// UpdateApplication - Updates an application
 func (c *Client) UpdateApplication(applicationID string, application Application) (*Application, error) {
 	rb, err := json.Marshal(application)
 	if err != nil {
 		return nil, err
 	}
 
-	req, err := http.NewRequest("PUT", fmt.Sprintf("%s/api/v1/application/%s", c.HostURL, applicationID), strings.NewReader(string(rb)))
+	req, err := http.NewRequest("PUT", fmt.Sprintf("%s/v1/application/%s", c.HostURL, applicationID), strings.NewReader(string(rb)))
 	if err != nil {
 		return nil, err
 	}
@@ -80,9 +80,9 @@ func (c *Client) UpdateApplication(applicationID string, application Application
 	return &order, nil
 }
 
-// DeleteOrder - Deletes an order
+// DeleteApplication - Deletes an application
 func (c *Client) DeleteApplication(applicationID string) error {
-	req, err := http.NewRequest("DELETE", fmt.Sprintf("%s/api/v1/application/%s", c.HostURL, applicationID), nil)
+	req, err := http.NewRequest("DELETE", fmt.Sprintf("%s/v1/application/%s", c.HostURL, applicationID), nil)
 	if err != nil {
 		return err
 	}

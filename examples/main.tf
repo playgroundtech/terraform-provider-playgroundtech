@@ -10,7 +10,7 @@ terraform {
 
 provider "playgroundtech" {
   email    = "email@email.com"
-  password = "password"
+  password = "Hejsan123Hejsan123"
 }
 
 resource "playgroundtech_application" "test" {
