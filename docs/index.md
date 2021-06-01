@@ -12,20 +12,20 @@ This provider can be used to send job applications to [PlaygroundTech](https://p
 In order to make request to the api you need to create a user.  
 Use the following command and add your information:
 ```bash
-curl -X POST -d '{"email": "email@email.com", "password": "password"}' https://api.playgroundtech.io/api/v1/users
+curl -X POST -d '{"email": "email@email.com", "password": "password"}' https://api.playgroundtech.io/v1/users
 ```
 
 ### Delete User & Eventual Application:
 To fetch your `:ID` and `Token` you can login with following:
 
 ```bash
-curl -d '{"email": "email@email.com", "password": "password"}' https://api.playgroundtech.io/api/v1/login
+curl -d '{"email": "email@email.com", "password": "password"}' https://api.playgroundtech.io/v1/login
 ```  
 
 After receiving your `:id` and `$TOKEN` you run following command with replacement of your `:id` and `Token`.  
 This will delete your user and any job application made by you.
 ```bash
-curl -X DELETE https://api.playgroundtech.io/api/v1/users/:id -H 'Authorization: Bearer {$TOKEN}' 
+curl -X DELETE https://api.playgroundtech.io/v1/users/:id -H 'Authorization: Bearer {$TOKEN}' 
 ```
 
 ## Schema

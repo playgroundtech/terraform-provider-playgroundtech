@@ -1,16 +1,15 @@
 terraform {
   required_providers {
     playgroundtech = {
-      version = "0.1"
+      version = "0.2"
       source   = "playgroundtech.io/job/application"
     }
   }
 }
 
-
 provider "playgroundtech" {
   email    = "email@email.com"
-  password = "Hejsan123Hejsan123"
+  password = "password"
 }
 
 resource "playgroundtech_application" "test" {

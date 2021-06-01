@@ -5,7 +5,7 @@ description: |-
   
 ---
 
-# playgroundtech_application (resource)
+# playgroundtech_application
 
 ## Schema
 
@@ -27,17 +27,17 @@ resource "playgroundtech_application" "test" {
 ### Required
 
 - **email** (String)  
-  Phone number applicant want to be contacted on.
-- **linkedin** (String)  
-  Email applicant want to be contacted on.
-- **phone_number** (String)  
-  Linkedin of applicant.
+  Phone number applicant want to be contacted on.  
+- **linkedin** (String)   
+  Email applicant want to be contacted on.  
+- **phone_number** (String)   
+  Linkedin of applicant.  
 
 ### Optional
 
-- **github** (String)
+- **github** (String)    
   Github of applicant to be used as further reference.
-- **homepage** (String)  
+- **homepage** (String)    
   Homepage of applicant to be used as further reference.
 
 
