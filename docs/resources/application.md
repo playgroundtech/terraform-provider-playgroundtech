@@ -25,13 +25,12 @@ resource "playgroundtech_application" "test" {
 ```
 
 ### Required
-
-- **email** (String)  
-  Phone number applicant want to be contacted on.  
-- **linkedin** (String)   
-  Email applicant want to be contacted on.  
 - **phone_number** (String)   
-  Linkedin of applicant.  
+  Phone number applicant want to be contacted on.
+- **email** (String)  
+  Email applicant want to be contacted on.
+- **linkedin** (String)   
+  Linkedin of applicant.
 
 ### Optional
 
