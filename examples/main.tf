@@ -1,8 +1,8 @@
 terraform {
   required_providers {
     playgroundtech = {
-      version = "0.2"
-      source   = "playgroundtech.io/job/application"
+      version = "0.3"
+      source  = "playgroundtech.io/job/application"
     }
   }
 }
