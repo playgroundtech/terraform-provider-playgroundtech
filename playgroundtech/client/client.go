@@ -10,7 +10,7 @@ import (
 )
 
 // HostURL - Default URL
-const HostURL string = "https://jobapi.playgroundtech.cloud/"
+const HostURL string = "https://jobapi.aws.playgroundtech.cloud"
 
 // Client -
 type Client struct {
