@@ -29,6 +29,9 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.16
+      - 
+        name: Stop any running gpg-agent (workaround)
+        run: gpgconf --kill gpg-agent || true
       -
         name: Import GPG key
         id: import_gpg
@@ -47,3 +50,4 @@ jobs:
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
           # GitHub sets this automatically
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+ 
