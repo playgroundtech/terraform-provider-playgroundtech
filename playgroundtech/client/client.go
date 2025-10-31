@@ -10,7 +10,7 @@ import (
 )
 
 // HostURL - Default URL
-const HostURL string = "https://api.playgroundtech.io"
+const HostURL string = "https://jobapi.aws.playgroundtech.cloud"
 
 // Client -
 type Client struct {
@@ -21,15 +21,15 @@ type Client struct {
 
 // AuthStruct -
 type AuthStruct struct {
-	Email string `json:"email"`
+	Email    string `json:"email"`
 	Password string `json:"password"`
 }
 
 // AuthResponse -
 type AuthResponse struct {
-	UserID   int    `json:"id"`
-	Email 	 string `json:"email"`
-	Token    string `json:"token"`
+	UserID int    `json:"id"`
+	Email  string `json:"email"`
+	Token  string `json:"token"`
 }
 
 // NewClient -
@@ -49,7 +49,7 @@ func NewClient(host, password, email *string) (*Client, error) {
 		// form request body
 		rb, err := json.Marshal(AuthStruct{
 			Password: *password,
-			Email: *email,
+			Email:    *email,
 		})
 		if err != nil {
 			return nil, err
@@ -82,8 +82,7 @@ func NewClient(host, password, email *string) (*Client, error) {
 }
 
 func (c *Client) doRequest(req *http.Request) ([]byte, error) {
-	req.Header.Set("Authorization", "Bearer " + c.Token)
-
+	req.Header.Set("Authorization", "Bearer "+c.Token)
 
 	res, err := c.HTTPClient.Do(req)
 	if err != nil {

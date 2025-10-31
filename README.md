@@ -8,7 +8,7 @@ $ make install
 In order to make request to the api you need to create a user.  
 Use the following command and to your information:
 ```bash
-curl -X POST -d '{"email": "email@email.com", "password": "password"}' https://api.playgroundtech.io/v1/users
+curl -X POST -d '{"email": "email@email.com", "password": "password"}' https://jobapi.aws.playgroundtech.cloud/v1/users
 ```
 
 ### Provider Docs:
@@ -68,7 +68,7 @@ Homepage of applicant to be used as further reference.
 To fetch your `:ID` and `Token` you can login with following:  
 
 ```bash
-curl -d '{"email": "email@email.com", "password": "password"}' api.playgroundtech.io/v1/login
+curl -d '{"email": "email@email.com", "password": "password"}' jobapi.aws.playgroundtech.cloud/v1/login
 ```  
 
 After receiving your `:id` and `$TOKEN` you run following command with replacement of your `:id` and `Token`.  
